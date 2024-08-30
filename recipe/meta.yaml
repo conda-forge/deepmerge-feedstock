@@ -1,5 +1,5 @@
 {% set name = "deepmerge" %}
-{% set version = "1.1.1" %}
+{% set version = "2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deepmerge-{{ version }}.tar.gz
-  sha256: 53a489dc9449636e480a784359ae2aab3191748c920649551c8e378622f0eca4
+  sha256: 5c3d86081fbebd04dd5de03626a0607b809a98fb6ccba5770b62466fe940ff20
 
 build:
   number: 0
