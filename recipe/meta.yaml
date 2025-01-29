@@ -7,21 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deepmerge-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/deepmerge-{{ version }}.tar.gz
   sha256: 5c3d86081fbebd04dd5de03626a0607b809a98fb6ccba5770b62466fe940ff20
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
+    - setuptools
     - setuptools-scm
   run:
-    - python >=3.5
+    - python >={{ python_min }}
+    - typing-extensions
 
 test:
   imports:
@@ -30,6 +32,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
