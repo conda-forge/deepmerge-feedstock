@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deepmerge-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/deepmerge-{{ version }}.tar.gz
   sha256: 5c3d86081fbebd04dd5de03626a0607b809a98fb6ccba5770b62466fe940ff20
 
 build:
